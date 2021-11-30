@@ -1,21 +1,70 @@
+export let card_value_map = {
+  "ace": 14,
+  "jack": 11,
+  "queen": 12,
+  "king": 13,
+  "two": 2,
+  "three": 3,
+  "four": 4,
+  "five": 5,
+  "six": 6,
+  "seven": 7,
+  "eight": 8,
+  "nine": 9,
+  "ten": 10
+}
 
-"ace"
-"jack"
-"queen"
-"king"
-"two"
-three
-four
-five
-six
-seven
-eight
-nine
-ten 
-
-
-4 A
-4 J
-4 Q
-4 K
-4 sets of 2 through 10
+export let deck = [
+  "ace",
+  "ace",
+  "ace",
+  "ace",
+  "jack",
+  "jack",
+  "jack",
+  "jack",
+  "queen",
+  "queen",
+  "queen",
+  "queen",
+  "king",
+  "king",
+  "king",
+  "king",
+  "two",
+  "two",
+  "two",
+  "two",
+  "three",
+  "three",
+  "three",
+  "three",
+  "four",
+  "four",
+  "four",
+  "four",
+  "five",
+  "five",
+  "five",
+  "five",
+  "six",
+  "six",
+  "six",
+  "six",
+  "seven",
+  "seven",
+  "seven",
+  "seven",
+  "eight",
+  "eight",
+  "eight",
+  "eight",
+  "nine",
+  "nine",
+  "nine",
+  "nine",
+  "ten",
+  "ten",
+  "ten",
+  "ten"
+];
