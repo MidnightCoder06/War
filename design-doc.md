@@ -1,13 +1,38 @@
 
 server side render the home page (wizard news as an example)
 the home page can just be an image background with a 'start game' button in the center
+  * that should
+      - shuffle the deck
+      - split deck in half amongst players
 
 ======
 
+UI:
+                        'Player Turn:''  * shows either a 1 or 2 * (top center)
+
+    'Player 1'                                                                    'Player 2'
+    'card count':                       'initiate battle' button                  'card count':
+
+
+
+              player x has won! * when someone wins *                      start over button (bottom right)
+
+
+
+
+initiaite battle should
+* trigger some animation
+* display current card value (a string, not an image) of each player
+* pause for a bit
+* display text of which player won the battle
+* update the card count
+
+- same process for initiate war 
+
+
+======
 
 typically played by two players using a standard playing card deck
-watch Preston's lecture on game logic to get advice on the best way to create the player objects
-read up on best way to create card deck
 
 The objective of the game is to win all of the cards (all 52).
 
@@ -30,37 +55,6 @@ If a player runs out of cards during a war - that player immediately loses.
 ======
 
 
-Player Object
-
-properties:
-  noOfCards (int)
-  hand (list of card objects)
-
-
-
-
-Game class?
-  calls all the util functions?
-  assigns cards to the appropriate player
-  holds the key value pair of string to int value?
-
-
-
-Card Object:
-4 A
-4 J
-4 Q
-4 K
-4 sets of 2 through 10
-
-properties:
-  card-value -> example "ace"
-  game-value -> assign an int value
-  up-or-down
-
-
-
-
 
 Database
 
@@ -68,7 +62,8 @@ Table
 -> LifeTimeWins
 
 Rows
-playerID | numberOfWins
+player1 (string) | numberOfWins (int)
+player2 (string) | numberOfWins (int)
 
 
 

@@ -9,4 +9,5 @@
   player class
     - has a deck (object)
     - winner (boolean)
+    - myTurn (boolean)
 */
