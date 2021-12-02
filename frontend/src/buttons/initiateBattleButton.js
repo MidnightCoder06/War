@@ -1,7 +1,9 @@
+import { battle } from '../utils/battle'
 
 const InitiateBattleButton = () => {
+  const { playerOne, playerTwo } = props;
   render(
-    <button> Initiate Battle </button>
+    <button onClick={() => battle(playerOne, playerTwo)}> Initiate Battle </button>
   );
 }
 
