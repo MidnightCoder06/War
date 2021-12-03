@@ -1,24 +1,71 @@
-current place: going to local host 3000 sucessfully server side renders some text
-
 next step:
-
-server side render (via NextJS)
-  - a good looking home page using wizard news as example
-  - page that shows wins and losses for both players
-
-NextJS tutorial
-https://www.youtube.com/watch?v=mTz0GXj8NN0
-https://www.youtube.com/watch?v=7J4iL1HDshQ&list=PLYSZyzpwBEWSQsrukurP09ksi49H9Yj40
-https://www.youtube.com/watch?v=1WmNXEVia8I
-https://www.youtube.com/watch?v=MFuwkrseXVE
-https://www.youtube.com/watch?v=A63UxsQsEbU&list=PL4cUxeGkcC9g9gP2onazU5-2M-AzA8eBw
-https://www.youtube.com/watch?v=9P8mASSREYM&list=PLC3y8-rFHvwgC9mj0qv972IO5DmD-H0ZH
 
 Game logic
 https://www.youtube.com/watch?v=NxRwIZWjLtE
 https://www.youtube.com/watch?v=28VfzEiJgy4
 
 css modules vs. styled components?
+
+blah.module.css
+
+server side render (via NextJS)
+  - a good looking home page using wizard news as example
+  - page that shows wins and losses for both players
+
+NextJS tutorial
+-> ReactJS framework that allows for server side rendering (remember ReactJS is a libary)
+-> traditional react apps is all loaded on the client -> funneled through a single html page
+-> client side rendering means for every change you need to make a request to the server
+-> in next the first page is rendered from the server (better for seo purposes because they can see all the tags)
+-> removes the need for 'react-router-dom' to navigate between pages (just like php)
+
+* requires a recent version of node -> you can get it via the installer from Node's website
+
+
+Manual Setup
+Install next, react and react-dom in your project:
+
+npm install next react react-dom
+or
+yarn add next react react-dom
+
+Open package.json and add the following scripts:
+
+"scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start",
+  "lint": "next lint"
+}
+
+These scripts refer to the different stages of developing an application:
+
+dev - Runs next dev which starts Next.js in development mode
+build - Runs next build which builds the application for production usage
+start - Runs next start which starts a Next.js production server
+lint - Runs next lint which sets up Next.js' built-in ESLint configuration
+Next.js is built around the concept of pages. A page is a React Component exported from a .js, .jsx, .ts, or .tsx file in the pages directory.
+
+Pages are associated with a route based on their file name. For example pages/about.js is mapped to /about. You can even add dynamic route parameters with the filename.
+^no need for 3rd party router install
+
+To start developing your application run npm run dev or yarn dev.
+This starts the development server on http://localhost:3000.
+
+Visit http://localhost:3000 to view your application.
+
+So far, we get:
+
+Automatic compilation and bundling (with webpack and babel)
+React Fast Refresh
+Static generation and server-side rendering of ./pages/
+Static file serving. ./public/ is mapped to /
+In addition, any Next.js application is ready for production from the start, read more in our Deployment documentation.
+
+* npm init -> programmatic way to create a package.json
+
+* everything in public folder is directly assemble from the browser -> localhost3000/...filename...
+  * good for images
 
 
 # Goal of this project:
