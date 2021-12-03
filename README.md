@@ -1,3 +1,32 @@
+# Goal of this project:
+
+Implement an application that plays the card game of [War](https://en.wikipedia.org/wiki/War_(card_game)) using the rules [here](https://bicyclecards.com/how-to-play/war/).
+
+Create a RESTful service with two endpoints:
+- An endpoint to start a game. Two simulated players will play out the game.
+- An endpoint to get lifetime wins for each player stored in a database.
+                                                                  ^watch the freecode camp video on database design
+
+Basic unit testing.
+
+Host on AWS + deploy a docker container + configure Azure & GCP backups via Terraform
+
+Docker:
+https://www.youtube.com/watch?v=_dfLOzuIg2o
+https://www.youtube.com/watch?v=JSLpG_spOBM
+
+Containers:
+https://www.youtube.com/watch?v=0qotVMX-J5s
+
+Kubernetes & Docker:
+https://azure.microsoft.com/en-us/topic/kubernetes-vs-docker/
+https://www.youtube.com/watch?v=2vMEQ5zs1ko&t=1s
+https://www.youtube.com/watch?v=HmxkYNv1ksg
+
+Terraform:
+https://www.youtube.com/watch?v=tomUWcQ0P3k
+
+
 next step:
 
 Game logic
@@ -7,6 +36,46 @@ https://www.youtube.com/watch?v=28VfzEiJgy4
 css modules vs. styled components?
 
 blah.module.css
+
+
+# Extra notes
+
+You did a manual setup instead of create-react-app
+
+Jeans-Air:war jeanleconteii$ npm run start-user-interface
+
+> war@1.0.0 start-user-interface
+> react-scripts start
+
+Could not find a required file.
+  Name: index.js
+  Searched in: /Users/jeanleconteii/war/src
+
+https://www.robotstxt.org/robotstxt.html
+
+You don't need the icons in manifest.json from create-react-app
+
+https://developers.google.com/web/fundamentals/web-app-manifest/
+
+https://www.w3schools.com/tags/tag_noscript.asp
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth
+^was in index.css
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/font-family
+
+
+Browserslist is a tool that allows specifying which browsers should be supported in your frontend app by specifying "queries" in a config file. It's used by frameworks/libraries such as React, Angular and Vue, but it's not limited to them.
+
+Browserslist is a tool that allows specifying which browsers should be supported in your frontend app by specifying "queries" in a config file. It's used by frameworks/libraries such as React, Angular and Vue, but it's not limited to them.
+
+Let's see each individual query in your example:
+
+0.2%: All browsers that have at least 0,2% of global market share
+not dead: Exclude browsers without official support in the last 24 months
+not ie <= 11: Exclude IE 11 and older versions
+not op_mini all: Exclude Opera Mini
+
 
 server side render (via NextJS)
   - a good looking home page using wizard news as example
@@ -66,35 +135,5 @@ In addition, any Next.js application is ready for production from the start, rea
 
 * everything in public folder is directly assemble from the browser -> localhost3000/...filename...
   * good for images
-
-
-# Goal of this project:
-
-Implement an application that plays the card game of [War](https://en.wikipedia.org/wiki/War_(card_game)) using the rules [here](https://bicyclecards.com/how-to-play/war/).
-
-Create a RESTful service with two endpoints:
-- An endpoint to start a game. Two simulated players will play out the game.
-- An endpoint to get lifetime wins for each player stored in a database.
-                                                                  ^watch the freecode camp video on database design
-
-Basic unit testing.
-
-Host on AWS + deploy a docker container + configure Azure & GCP backups via Terraform
-
-Docker:
-https://www.youtube.com/watch?v=_dfLOzuIg2o
-https://www.youtube.com/watch?v=JSLpG_spOBM
-
-Containers:
-https://www.youtube.com/watch?v=0qotVMX-J5s
-
-Kubernetes & Docker:
-https://azure.microsoft.com/en-us/topic/kubernetes-vs-docker/
-https://www.youtube.com/watch?v=2vMEQ5zs1ko&t=1s
-https://www.youtube.com/watch?v=HmxkYNv1ksg
-
-Terraform:
-https://www.youtube.com/watch?v=tomUWcQ0P3k
-
 
 npm init -> creates the package.json
