@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 /*
 in html functions are passed as a string
@@ -8,9 +9,15 @@ in jsx functions are passed as an event handler
 */
 const StartButton = () => {
   // turns a 'game started' property in the redux store to true
-  // history.push or whatever to the board 
-  render(
-    <button onclick={startGame}> Start Game! </button>
+
+  let navigate = useNavigate();
+
+  const startGame = () => {
+    console.log('start game');
+  }
+
+  return(
+    <button onClick={startGame}> Start Game! </button>
   );
 }
 
