@@ -3,7 +3,7 @@ import React from 'react';
 // import Home from '../frontend/src/screens/home';
 import Home from './screens/home';
 import Records from './screens/records';
-// TODO: Add Board Route
+import Board from './screens/board';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -11,7 +11,8 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={ <Home /> } />
-        <Route path="/records" element= { <Records /> } />
+        <Route path="/records" element={ <Records /> } />
+        <Route path="/board" element={ <Board /> } />
       </Routes>
     </div>
   );

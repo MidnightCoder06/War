@@ -37,6 +37,8 @@ css modules vs. styled components?
 
 blah.module.css
 
+Study JavaScript in depth: https://www.javascripttutorial.net/es6/ & https://javascript.info/
+
 
 # Extra notes
 

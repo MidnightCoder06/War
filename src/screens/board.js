@@ -1,26 +1,28 @@
 import React, { useEffect } from 'react';
-import { Dealer, Player }
+import { Dealer, Player } from '../game/participants';
 
-import InitiateBattleButton from './buttons/initiateBattleButton';
-import RestartButton from './buttons/restartButton';
-import StartButton from './buttons/startButton';
+import InitiateBattleButton from '../buttons/initiateBattleButton';
+import RestartButton from '../buttons/restartButton';
 
 const Board = () => {
 
-  useEffect(() => {
-    // `gameStarted` property comes from the redux store
-    if (gameStarted) {
-      let dealer = Dealer()
-      dealer.shuffleDeck()
-      let playerReadyDeck = dealer.partitionDeck()
-      let player1 = Player(playerReadyDeck[0], "player one")
-      let player2 = Player(playerReadyDeck[1], "player two")
-    }
-  },[]);
+  // useEffect(() => {
+  //   // `gameStarted` property comes from the redux store
+  //   if (gameStarted) {
+  //     const dealer = Dealer()
+  //     dealer.shuffleDeck()
+  //     const playerReadyDeck = dealer.partitionDeck()
+  //     const player1 = Player(playerReadyDeck[0], "player one")
+  //     const player2 = Player(playerReadyDeck[1], "player two")
+  //   }
+  // },[]);
 
   // `battle initiated` property comes from the redux store
-  render (
+  return (
     <>
+      <div> Player 1 </div>
+      <div> Player 2 </div>
+      {/*
       <div> Player Turn: {player1.myTurn ? player1.name : player2.name} </div>
       <div> Player 1 </div>
       <div> card count: {player1.deck.cardCount}</div>
@@ -31,6 +33,7 @@ const Board = () => {
       <RestartButton />
       <div> Player 1 battle card: { battle initiated ? player1.deck[0] } </div>
       <div> Player w battle card: { battle initiated ? player2.deck[1] } </div>
+      */}
     </>
   );
 }

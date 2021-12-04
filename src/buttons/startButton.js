@@ -14,6 +14,7 @@ const StartButton = () => {
 
   const startGame = () => {
     console.log('start game');
+    navigate("/board");
   }
 
   return(

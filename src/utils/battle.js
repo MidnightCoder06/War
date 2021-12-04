@@ -1,5 +1,7 @@
+import React from 'react';
+import { initiateWar } from './war';
 
-export const battle(playerOne, playerTwo) {
+export const battle = (playerOne, playerTwo) => {
   if (playerOne.deck[0] === playerTwo.deck[0]) {
     // this should trigger some cool animation
     initiateWar(cardOne, cardTwo)

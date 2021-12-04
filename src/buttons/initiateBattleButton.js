@@ -1,8 +1,8 @@
 import { battle } from '../utils/battle'
 
-const InitiateBattleButton = () => {
+const InitiateBattleButton = (props) => {
   const { playerOne, playerTwo } = props;
-  render(
+  return(
     <button onClick={() => battle(playerOne, playerTwo)}> Initiate Battle </button>
   );
 }
