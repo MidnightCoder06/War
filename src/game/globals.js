@@ -1,4 +1,4 @@
-export let card_value_map = {
+export const card_value_map = {
   "ace": 14,
   "jack": 11,
   "queen": 12,

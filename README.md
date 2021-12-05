@@ -1,9 +1,3 @@
-- start game opens the ui
-- test the incrementing and decrementing approach
-
-
-
-
 # Goal of this project:
 
 Implement an application that plays the card game of [War](https://en.wikipedia.org/wiki/War_(card_game)) using the rules [here](https://bicyclecards.com/how-to-play/war/).
