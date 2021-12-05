@@ -1,11 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-const initialStateValue = { isGameStarted: true, isBattleInitiated: true, isWarInitiated: false }
+const initialStateValue = { isGameStarted: false, isBattleInitiated: false, isWarInitiated: false }
 
 export const gameSlice = createSlice({
   name: 'game',
   initialState: { value: initialStateValue },
   reducers: {
+    startGame: (state, action) => {
+      state.value.isGameStarted = true
+    },
     restartGame: (state, action) => {
       state.value = initialStateValue
     },
@@ -18,5 +21,5 @@ export const gameSlice = createSlice({
   },
 });
 
-export const { restartGame, initiateBattle, initiateWar } = gameSlice.actions
+export const { startGame, restartGame, initiateBattle, initiateWar } = gameSlice.actions
 export default gameSlice.reducer
