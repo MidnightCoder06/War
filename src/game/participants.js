@@ -111,20 +111,21 @@ export class Dealer {
   */
 
   static deck = new Deck()
+  shuffledDeck = []
 
-  shuffleDeck(deck) {
+  shuffleDeck() {
     // some animation
     // some logic
-    const shuffleDeck = deck
+    this.shuffledDeck = deck
     // then:
-    return shuffledDeck
+    return this.shuffledDeck
   }
 
-  partitionDeck(shuffledDeck) {
+  partitionDeck() {
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
     // https://www.w3schools.com/jsref/jsref_slice_array.asp
-    const playerOneDeck = shuffledDeck.slice(0, (shuffledDeck.length / 2));
-    const playerTwoDeck = shuffledDeck.slice(shuffledDeck.length / 2);
+    const playerOneDeck = this.shuffledDeck.slice(0, (this.shuffledDeck.length / 2));
+    const playerTwoDeck = this.shuffledDeck.slice(this.shuffledDeck.length / 2);
     return [playerOneDeck, playerTwoDeck]
   }
 }

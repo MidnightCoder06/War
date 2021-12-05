@@ -14,6 +14,7 @@ const StartButton = () => {
 
   const startGame = () => {
     console.log('start game');
+    // TODO: set isGameStarted to true via a dispatch
     navigate("/board");
   }
 

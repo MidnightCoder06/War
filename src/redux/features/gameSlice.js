@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-const initialStateValue = { isGameStarted: false, isBattleInitiated: false, isWarInitiated: false }
+const initialStateValue = { isGameStarted: true, isBattleInitiated: true, isWarInitiated: false }
 
 export const gameSlice = createSlice({
   name: 'game',
