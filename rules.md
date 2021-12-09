@@ -1,25 +1,4 @@
 
-server side render the home page (wizard news as an example)
-the home page can just be an image background with a 'start game' button in the center
-  * that should
-      - shuffle the deck
-      - split deck in half amongst players
-
-======
-
-UI:
-                        'Player Turn:''  * shows either a 1 or 2 * (top center)
-
-    'Player 1'                                                                    'Player 2'
-    'card count':                       'initiate battle' button                  'card count':
-
-
-
-              player x has won! * when someone wins *                      start over button (bottom right)
-
-
-
-
 initiaite battle should
 * trigger some animation
 * display current card value (a string, not an image) of each player
@@ -27,7 +6,7 @@ initiaite battle should
 * display text of which player won the battle
 * update the card count
 
-- same process for initiate war 
+- same process for initiate war
 
 
 ======
@@ -50,21 +29,3 @@ This repeats until one player's face-up card is higher than their opponent's.
 (takes all 10 cards, and so on.)
 
 If a player runs out of cards during a war - that player immediately loses.
-
-
-======
-
-
-
-Database
-
-Table
--> LifeTimeWins
-
-Rows
-player1 (string) | numberOfWins (int)
-player2 (string) | numberOfWins (int)
-
-
-
-======

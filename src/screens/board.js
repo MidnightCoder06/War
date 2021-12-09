@@ -8,9 +8,10 @@ import RestartButton from '../buttons/restartButton';
 
 const Board = () => {
 
-  // const playerValuesFromRedux = useSelector((state) => state.players.value)
-  // console.log(playerValuesFromRedux)
+  const playerValuesFromRedux = useSelector((state) => state.players.value)
+  console.log('playerValuesFromRedux', playerValuesFromRedux)
   const gameValuesFromRedux = useSelector((state) => state.game.value);
+  console.log('gameValuesFromRedux', gameValuesFromRedux)
 
   // 'Const declarations' require an initialization value.
   // let PlayerOne;
@@ -52,7 +53,7 @@ const Board = () => {
 
   */
 
-
+  // todo: winner status needs to come from redux
   return (
     <div>
       {playerOne && playerTwo ?

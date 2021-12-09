@@ -9,9 +9,6 @@ export const gameSlice = createSlice({
     startGame: (state, action) => {
       state.value.isGameStarted = true
     },
-    restartGame: (state, action) => {
-      state.value = initialStateValue
-    },
     initiateBattle: (state, action) => {
       state.value.isBattleInitiated = true
     },
@@ -21,5 +18,5 @@ export const gameSlice = createSlice({
   },
 });
 
-export const { startGame, restartGame, initiateBattle, initiateWar } = gameSlice.actions
+export const { startGame, initiateBattle, initiateWar } = gameSlice.actions
 export default gameSlice.reducer

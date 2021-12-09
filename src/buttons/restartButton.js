@@ -1,8 +1,17 @@
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { restartGame } from '../redux/features/playerSlice';
 
 const RestartButton = () => {
-  // TODO: will dispatch a redux action 
+  const dispatch = useDispatch();
+
+  const restart = () => {
+    console.log('restart game')
+    dispatch(restartGame());
+  }
+
   return(
-    <button> Start over </button>
+    <button onClick={() => restart()}> Start over </button>
   );
 }
 
