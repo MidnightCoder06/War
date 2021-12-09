@@ -58,7 +58,6 @@ const Board = () => {
     <div>
       {playerOne && playerTwo ?
         <>
-          <div> Player Turn: {playerOne.myTurn ? playerOne.name : playerTwo.name} </div>
           <div> Player 1 </div>
           <div> card count: {playerOne.deck.cardCount}</div>
           <div> Player 2 </div>

@@ -19,8 +19,11 @@ export const playerSlice = createSlice({
     restartGame: (state, action) => {
       state.value = initialStateValue
     },
+    playerWins: (state, action) => {
+      state.value[action.payload] = true
+    },
   },
 })
 
-export const { increaseNumberOfCards, decreaseNumberOfCards, restartGame } = playerSlice.actions
+export const { increaseNumberOfCards, decreaseNumberOfCards, restartGame, playerWins } = playerSlice.actions
 export default playerSlice.reducer

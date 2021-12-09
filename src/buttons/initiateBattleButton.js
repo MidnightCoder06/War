@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { card_value_map } from '../game/globals';
-import { increaseNumberOfCards, decreaseNumberOfCards } from '../redux/features/playerSlice';
+import { increaseNumberOfCards, decreaseNumberOfCards, playerWins } from '../redux/features/playerSlice';
 // you tried to put the helper function `battle` in a utils folder and import it
 // import { battle } from '../utils/battle'
 // but hooks can only be called in components, not regular javascript functions
@@ -18,7 +18,6 @@ console.log(sample) // [ 3, 4, 5 ]
 
 */
 
-// TODO: need to declare winners and losers from a state refresh perspective here
 
 const InitiateBattleButton = (props) => {
   const { playerOne, playerTwo } = props;
@@ -31,6 +30,7 @@ const InitiateBattleButton = (props) => {
       dispatch(increaseNumberOfCards(["playerOne", 1]))
       dispatch(decreaseNumberOfCards(["playerTwo", 1]))
     } else {
+      dispatch(playerWins("playerTwo"))
       // TODO: hit endpoint to log a win / loss -> record that in the database
     }
   }
@@ -42,6 +42,7 @@ const InitiateBattleButton = (props) => {
       dispatch(increaseNumberOfCards(["playerTwo", 1]))
       dispatch(decreaseNumberOfCards(["playerOne", 1]))
     } else {
+      dispatch(playerWins("playerOne"))
       // TODO: hit endpoint to log a win / loss -> record that in the database
     }
   }
@@ -51,10 +52,10 @@ const InitiateBattleButton = (props) => {
       // TODO: this should trigger some cool animation
       war(playerOne, playerTwo)
     } else if(card_value_map[playerOne.deck[0]] > card_value_map[playerTwo.deck[0]]) {
-      console.log('player 1 wins the battle')
+      console.log('player 1 wins the battle w/ card: ', playerOne.deck[0], 'player 2 had: ', playerTwo.deck[0])
       playerOneWinsConflict(playerOne, playerTwo);
     } else {
-      console.log('player 2 wins the battle')
+      console.log('player 2 wins the battle w/ card: ', playerTwo.deck[0], 'player 1 had: ', playerOne.deck[0])
       playerTwoWinsConflict(playerOne, playerTwo);
     }
   }
@@ -80,9 +81,13 @@ const InitiateBattleButton = (props) => {
     console.log('war initiated')
     // Base case: if a player has less than 3 cards to draw then they lose
     if(playerOne.deck.lenth < 3) {
+      dispatch(playerWins("playerTwo"))
       // TODO: hit endpoint to log a win / loss -> record that in the database
+      return
     } else if(playerTwo.deck.lenth < 3) {
+      dispatch(playerWins("playerOne"))
       // TODO: hit endpoint to log a win / loss -> record that in the database
+      return
     } else {
 
       const playerOneDrawnCards = playerOne.deck.slice(0 + (counter * 3), 3 + (counter * 3));
@@ -93,6 +98,7 @@ const InitiateBattleButton = (props) => {
 
       if (card_value_map[playerOneDrawnCards[0]] === card_value_map[playerTwoDrawnCards[0]]) {
         // this should trigger some cool animation
+        console.log('recursive war call')
         war(playerOne, playerTwo, playerOnePotentialSpoils, playerTwoPotentialSpoils, counter += 1)
 
       } else if(card_value_map[playerOneDrawnCards[0]] > card_value_map[playerTwoDrawnCards[0]]) {
@@ -103,6 +109,7 @@ const InitiateBattleButton = (props) => {
         if (playerTwo.deck.length > 3) {
           playerTwo.deck.splice(0,3);
         } else {
+          dispatch(playerWins("playerOne"))
           // TODO: hit endpoint to log a win / loss -> record that in the database
         }
       } else {
@@ -113,6 +120,7 @@ const InitiateBattleButton = (props) => {
         if (playerOne.deck.length > 3) {
           playerOne.deck.splice(0,3);
         } else {
+          dispatch(playerWins("playerTwo"))
           // TODO: hit endpoint to log a win / loss -> record that in the database
         }
       }

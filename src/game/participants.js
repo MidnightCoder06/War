@@ -147,7 +147,8 @@ export class Player {
   Public: the field is accessible anywhere
   Private: the field is accessible only within the body of the class
   */
-  myTurn = false
+  //myTurn = false
+  //winner = false
 }
 
 
