@@ -66,7 +66,7 @@ const Board = () => {
           <InitiateBattleButton playerOne={playerOne} playerTwo={playerTwo} />
           <div> Player 1 battle card: { gameValuesFromRedux.isBattleInitiated ? playerOne.deck[0] : '' } </div>
           <div> Player 2 battle card: { gameValuesFromRedux.isBattleInitiated ? playerTwo.deck[1] : '' } </div>
-          <div> winner: {playerOne.winner ? playerOne.name : playerTwo.winner ? playerTwo.name : ''} </div>
+          <div> winner: {playerValuesFromRedux["playerOne"].winner ? playerOne.name : playerValuesFromRedux["playerTwo"].winner ? playerTwo.name : ''} </div>
           <RestartButton />
         </>
         :

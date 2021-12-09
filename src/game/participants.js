@@ -147,7 +147,6 @@ export class Player {
   Public: the field is accessible anywhere
   Private: the field is accessible only within the body of the class
   */
-  winner = false // TODO: remove this -> needs to be in redux to trigger a component refresh
   myTurn = false
 }
 

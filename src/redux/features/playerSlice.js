@@ -1,7 +1,6 @@
 import  { createSlice } from '@reduxjs/toolkit'
 
-// TODO: add a winner property here for each player, initialized to false
-const initialStateValue = { "playerOne": { numberOfCardsInDeck: 26 }, "playerTwo": { numberOfCardsInDeck: 26 } }
+const initialStateValue = { "playerOne": { numberOfCardsInDeck: 26, winner: false }, "playerTwo": { numberOfCardsInDeck: 26, winner: false } }
 
 export const playerSlice = createSlice({
   name: 'players',
