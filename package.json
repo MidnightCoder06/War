@@ -4,17 +4,22 @@
   "description": "two player card game",
   "main": "index.js",
   "dependencies": {
+    "@apollo/react-hooks": "^4.0.0",
     "@reduxjs/toolkit": "^1.6.2",
+    "apollo-boost": "^0.4.9",
     "express": "^4.17.1",
+    "graphql": "^14.7.0",
     "next": "^12.0.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.0.2",
     "react-scripts": "^4.0.3",
-    "redux-mock-store": "^1.5.4"
+    "redux-mock-store": "^1.5.4",
+    "styled-components": "^5.3.3"
   },
   "devDependencies": {
+    "json-graphql-server": "^2.3.1",
     "nodemon": "^2.0.15"
   },
   "scripts": {

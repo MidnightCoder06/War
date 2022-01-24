@@ -1,16 +1,21 @@
-import Head from 'next/head'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 export default function Home() {
+
+  const router = useRouter()
+
   return (
     <div>
-      <h1> Hello World from Next </h1>
+      <h1> Hello World from Next!!! </h1>
+      <button aria-label='login' onClick={() => router.push('/login')}> Click me to login into your account </button>
+      <ul>
+        <li>
+          <Link href="/about">
+            <a>About Us</a>
+          </Link>
+        </li>
+      </ul>
     </div>
   );
 }
-
-/* https://nextjs.org/docs/getting-started
-  https://www.youtube.com/watch?v=9P8mASSREYM&list=PLC3y8-rFHvwgC9mj0qv972IO5DmD-H0ZH
-  https://www.youtube.com/watch?v=A63UxsQsEbU&list=PL4cUxeGkcC9g9gP2onazU5-2M-AzA8eBw
-  https://www.youtube.com/watch?v=MFuwkrseXVE
-  https://www.youtube.com/watch?v=mTz0GXj8NN0
-*/
