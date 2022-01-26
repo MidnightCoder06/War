@@ -30,10 +30,7 @@ module.exports = {
         }
     ]
 }
-
 /*
-
-Let’s see a simple users query:
 query {
     User(id: 2) {
         id
@@ -51,7 +48,6 @@ We are querying for a user with “id” value of 2, and we are telling GraphQL 
         }
     }
 }
-
 */
 
 
