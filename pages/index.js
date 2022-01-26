@@ -14,14 +14,14 @@ export default function Home() {
   const testGraphQl = async () => {
     
     const query = gql`
-    query {
-      allUsers {
-        name
-        age
+      query {
+        allUsers {
+          name
+          age
+        }
       }
-    }
-  `;
-  
+    `;
+
     const sampleData = await client.query({ query });
     console.log(sampleData);
   }
