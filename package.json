@@ -7,8 +7,10 @@
     "@apollo/react-hooks": "^4.0.0",
     "@reduxjs/toolkit": "^1.6.2",
     "apollo-boost": "^0.4.9",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "graphql": "^14.7.0",
+    "json-graphql-server": "^2.3.1",
     "next": "^12.0.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -19,11 +21,11 @@
     "styled-components": "^5.3.3"
   },
   "devDependencies": {
-    "json-graphql-server": "^2.3.1",
     "nodemon": "^2.0.15"
   },
   "scripts": {
     "start-server": "nodemon backend/server.js",
+    "start-db": "json-graphql-server db.js",
     "start-user-interface": "react-scripts start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next dev",
